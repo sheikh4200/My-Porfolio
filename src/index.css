@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+@import "tailwindcss";
+
+html,
+body {
+  width: 100dvw;
+  overflow: hidden;
+  height: 100dvh;
+  background-image: url("/images/wallpaper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Custom utilities */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+.abs-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+/* Base styles */
+main {
+  @apply w-dvw h-dvh overflow-hidden;
+}
+
+nav {
+  @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+}
+
+nav div {
+  @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
+}
+
+nav div:last-child {
+  @apply max-sm:hidden;
+}
+
+nav ul {
+  @apply flex items-center gap-5 max-sm:hidden;
+}
+
+nav ul p {
+  @apply text-sm cursor-pointer hover:underline transition-all;
+}
+
+nav time {
+  @apply text-sm font-medium text-black;
+}
+
+/* Component styles */
+.icon {
+  @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+}
+
+#welcome {
+  @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+}
+
+#welcome .small-screen {
+  @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
+}
+
+#welcome .small-screen p {
+  @apply flex-1 text-[16px] text-center font-mono text-gray-400;
+}
+
+#dock {
+  @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+}
+
+.dock-container {
+  @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+}
+
+.tooltip {
+  @apply py-1 px-3 w-fit text-center text-xs rounded-md bg-blue-200 text-blue-900 shadow-2xl;
+}
+
+.dock-icon {
+  @apply size-14 2xl:size-20 cursor-pointer;
+}
+
+.dock-icon img {
+  @apply object-cover object-center;
+}
+
+#window-controls {
+  @apply flex gap-2;
+}
+
+.close {
+  @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
+}
+
+.minimize {
+  @apply size-3.5 rounded-full bg-[#ffc030];
+}
+
+.maximize {
+  @apply size-3.5 rounded-full bg-[#2acb42];
+}
+
+#window-header {
+  @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+}
+
+#safari {
+  @apply w-full max-w-4xl absolute top-40 left-1/12 bg-white shadow-2xl rounded-xl overflow-hidden;
+}
+
+.search {
+  @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+}
+
+.search input {
+  @apply placeholder:text-gray-400;
+}
+
+.blog {
+  @apply bg-white p-10 max-w-3xl mx-auto;
+}
+
+.blog h2 {
+  @apply text-xl font-bold text-pink-600 mb-10;
+}
+
+.blog-post {
+  @apply grid grid-cols-12 gap-5;
+}
+
+.blog-post img {
+  @apply w-full h-full rounded-md object-cover;
+}
+
+.content {
+  @apply col-span-10 space-y-3;
+}
+
+.content p {
+  @apply text-xs text-gray-500;
+}
+
+.content h3 {
+  @apply font-semibold text-base text-gray-800;
+}
+
+.content a {
+  @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
+}
+
+#terminal {
+  @apply w-full max-w-xl absolute top-32 left-1/12 bg-white shadow-2xl rounded-xl overflow-hidden;
+}
+
+#terminal h2 {
+  @apply font-bold text-sm text-center w-full;
+}
+
+.techstack {
+  @apply text-sm font-mono p-5;
+}
+
+.label {
+  @apply flex items-center ms-10 mt-7;
+}
+
+.content {
+  @apply py-5 my-5 border-y border-dashed border-gray-300 space-y-1;
+}
+
+.content li .check {
+  @apply text-[#00A154] w-5;
+}
+
+.content li h3 {
+  @apply font-semibold text-[#00A154] w-32 ms-5;
+}
+
+.content li ul {
+  @apply flex items-center gap-3;
+}
+
+.footnote {
+  @apply text-[#00A154] space-y-1;
+}
+
+.footnote p {
+  @apply flex items-center;
+}
+
+.footnote svg {
+  @apply w-5 me-5;
+}
+
+/* Continue with the rest of your styles... */
+#contact {
+  @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl rounded-xl overflow-hidden;
+}
+
+#contact h2 {
+  @apply font-bold text-sm text-center w-full;
+}
+
+#contact h3 {
+  @apply text-xl font-semibold;
+}
+
+#contact ul {
+  @apply flex items-center gap-3;
+}
+
+#contact li {
+  @apply rounded-lg p-3 w-60 hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
+}
+
+#contact a {
+  @apply space-y-5;
+}
+
+#contact p {
+  @apply font-semibold text-sm text-white;
+}
+
+/* Add font families to Tailwind config */
