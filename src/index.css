@@ -2,6 +2,24 @@
 
 @import "tailwindcss";
 
+
+/* Ensure Georama font is properly applied */
+.font-georama {
+  font-family: 'Georama', sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wght' 400; /* Default weight */
+}
+
+/* Improve text rendering for animations */
+#welcome span {
+  display: inline-block;
+  transition: font-variation-settings 0.3s ease; /* Fallback transition */
+}
+
+
+
+
+
 html,
 body {
   width: 100dvw;
