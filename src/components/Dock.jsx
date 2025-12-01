@@ -49,8 +49,6 @@ const Dock = () => {
 }, []);
 
 
-
-
   const toggleApp = () => {};
 
   return (
@@ -77,6 +75,7 @@ const Dock = () => {
             </button>
           </div>
         ))}
+        
         <Tooltip id="dock-tooltip" place="top" className="tooltip" />
       </div>
     </section>
